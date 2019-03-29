@@ -1,4 +1,4 @@
-package lAbirintRecursivNotCompleteYet;
+package labirintRecursiveNotCompleteYet;
 
 import java.util.ArrayList;
 import java.util.List;

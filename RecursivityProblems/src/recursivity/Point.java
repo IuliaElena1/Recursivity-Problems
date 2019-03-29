@@ -4,7 +4,7 @@
  * $Header: $
  */
 
-package work;
+package recursivity;
 
 /**
  * @author <a href="mailto:isilist@ssi-schaefer-noell.com">isilist</a>

@@ -1,4 +1,4 @@
-package routeMapWithEXPLANATIONS;
+package routeMapWithExplanation;
 
 import java.util.ArrayList;
 import java.util.List;

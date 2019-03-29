@@ -1,5 +1,5 @@
 
-package work;
+package recursivity;
 
 import java.util.ArrayList;
 import java.util.List;

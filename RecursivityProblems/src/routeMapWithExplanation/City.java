@@ -1,38 +1,56 @@
 
-package routeMapAnotherSolution;
+package routeMapWithExplanation;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class City {
+	// parametrii:
+	// - un nume de oras
+	// -Map care reprezinta vecinii adica un alt oras + distanta pana la acel oras
+	// pentru a functiona Map-ul si Hash Mapul corect trebuie generat equals si hash
+	// dupa nume : doua orase sunt egale dc au acelasi nume
+	// code in aceasta clasa
 
 	private String name;
 	private Map<City, Integer> neighbours = new HashMap<>();
 
 	public City(String name) {
+		super();
 		this.name = name;
 	}
 
-	public void addNeighbour(City city, int distance) {
-		neighbours.put(city, distance);
-		city.neighbours.put(this, distance);
-	}
+	public String getName() {
 
-	public boolean hasName(String name) {
-		return this.name.equals(name);
+		return name;
 	}
 
 	public Map<City, Integer> getNeighbours() {
 		return neighbours;
 	}
 
+	public boolean hasName(String nameCity) {
+		if (this.name.equals(nameCity)) {
+			return true;
+		}
+		return false;
+	}
+
+	public void addReferenceToNeighour(City cityNeighbout, int distance) {
+		neighbours.put(cityNeighbout, distance);
+	}
+
+	public int getDistance(City stopCity) {
+
+		return neighbours.get(stopCity).intValue();
+
+		// Afiseaza distanta de la un oras la orasul stopCity
+		// neighbour.get(ObjectKey)
+	}
+
 	@Override
 	public String toString() {
 		return name;
-	}
-
-	public int getDistanceTo(City to) {
-		return neighbours.get(to);
 	}
 
 	@Override
@@ -59,4 +77,5 @@ public class City {
 			return false;
 		return true;
 	}
+
 }

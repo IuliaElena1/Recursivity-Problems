@@ -1,4 +1,4 @@
-package routeMapWithEXPLANATIONS;
+package routeMapWithExplanation;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,8 +14,9 @@ public class RouteMapImpl implements RouteMap {
 	private List<City> cities = new ArrayList<>();
 	private Route minRoute = null;
 
-	// adaugarea rutei presupune ca orasului Bucuresti ii adauga un element in Mapul
-	// cu vecinii adaica catre Craiova si distanta iar
+	// adaugarea rutei presupune ca orasului Bucuresti i se adauga un element in
+	// Mapul
+	// cu vecinii adica catre Craiova si distanta iar
 	// Craiovei ii adaug Bucurestiul cu aceeasi distanta
 
 	// pentru adaugarea unei rute avem nevoie sa stim orasul de unde pornim,orasul
@@ -82,7 +83,7 @@ public class RouteMapImpl implements RouteMap {
 		// start City =este orasul pe care il caut
 
 		findValidRoute(curentRoute, startCity, stopCity);
-		minRoute.showRoute();
+		// minRoute.showRoute();
 
 	}
 
@@ -110,6 +111,7 @@ public class RouteMapImpl implements RouteMap {
 		}
 
 		// dc ruta curenta nu contine nodul startCity il adaug la ruta
+		// startCity este adaugat ca un nod in lista de rute
 
 		curentRoute.addCurentCity(startCity);
 
@@ -129,14 +131,13 @@ public class RouteMapImpl implements RouteMap {
 
 			// clone() se implementeaza in clasa Route
 
-			if (minRoute == null || minRoute.getLenghtOfRoute() > curentRoute.getLenghtOfRoute()) {
-				try {
-					minRoute = (Route) curentRoute.clone(); //// clonam ruta curenta
-				} catch (Exception e) {
-
-					e.printStackTrace();
-				}
-			}
+			/*
+			 * if (minRoute == null || minRoute.getLenghtOfRoute() >
+			 * curentRoute.getLenghtOfRoute()) { try { minRoute = (Route)
+			 * curentRoute.clone(); //// clonam ruta curenta } catch (Exception e) {
+			 * 
+			 * e.printStackTrace(); } }
+			 */
 
 		} else
 
